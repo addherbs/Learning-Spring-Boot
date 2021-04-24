@@ -2,23 +2,21 @@ package com.example.webapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
 
     @RequestMapping("home")
-    public String home(HttpServletRequest req) {
+    public String home(String name, HttpSession session, @RequestParam("age") int myAge) {
 
-        HttpSession session = req.getSession();
-
-        String name = req.getParameter("name");
-        System.out.println("Came on to home Route " + name);
-
+        System.out.println("Came on to home Route " + name + " " + myAge);
         session.setAttribute("name", name);
-
+        session.setAttribute("age", myAge);
         return "home";
     }
 }

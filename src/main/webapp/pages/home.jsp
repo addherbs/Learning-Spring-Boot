@@ -7,7 +7,7 @@
     <title>Insert title here</title>
 </head>
     <body>
-        Welcome  ${name}!
+        Welcome  ${name}! You are ${age} years old now!
     </body>
 </html>
 
