@@ -7,7 +7,7 @@
     <title>Insert title here</title>
 </head>
     <body>
-        Welcome  ${name}! You are ${age} years old now!
+        Welcome  ${obj.name}! You are ${obj.age} years old now! And your fav. Language is ${obj.lang}!
     </body>
 </html>
 
